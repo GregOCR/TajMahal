@@ -9,15 +9,26 @@ import SwiftUI
 
 // Menu sous forme de liste
 struct MenuView: View {
-    // Référence vers le view model qui permet d'accéder aux tableaux d'entrées et de plats du menu
-    let viewModel: ViewModel = ViewModel()
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    let dataModel: DataModel = DataModel()
     
     var body: some View {
+        
         List {
             // À completer
         }
-    }
-}
+        .navigationTitle("Menu")
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: Button(action: {
+            presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image(systemName: "chevron.left")
+            }
+        })
+    }}
 
 #Preview {
     MenuView()

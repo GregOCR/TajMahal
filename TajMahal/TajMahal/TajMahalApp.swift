@@ -12,6 +12,7 @@ struct TajMahalApp: App {
     var body: some Scene {
         WindowGroup {
             WelcomeView()
+                .environment(\.colorScheme, .light) // Force le mode clair
         }
     }
 }
