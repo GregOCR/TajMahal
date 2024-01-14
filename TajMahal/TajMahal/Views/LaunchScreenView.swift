@@ -7,9 +7,19 @@
 
 import SwiftUI
 
+// page au lancement de l'app
 struct LaunchScreenView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            // installe un fond rouge à la vue ; conforme à la référence fournie dans les assets
+            ContainerRelativeShape()
+                .fill(Color("CustomRed"))
+                .ignoresSafeArea()
+            // affichage du logo centré à l'écran avec une taille de 150x150
+            Image("Logo")
+                .resizable()
+                .frame(width: 150, height: 150)
+        }
     }
 }
 
