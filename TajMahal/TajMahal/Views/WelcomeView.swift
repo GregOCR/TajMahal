@@ -3,109 +3,155 @@
 //  TajMahal
 //
 //  Created by Amandine Cousin on 31/10/2023.
+//  Modified by Greg on 14/01/2024.
 //
 
 import SwiftUI
 
+private let officeInformation = officeInformations
+
 // Page d'accueil
 struct WelcomeView: View {
+    
     var body: some View {
+        
+        let viewPadding: CGFloat = 25 // espace par défaut de la page
+        
         NavigationStack {
-            RestaurantImage() // affiche l'image de présentation du restaurant
-            RestaurantIdentity() // affiche le type et le nom du restaurant + le logo
-                .padding(.top)
-            RestaurantInformationsView() // affiche les informations relatives au restaurant
-                .padding([.top, .bottom])
-            NavigationLink {
-                MenuView()
-            } label : {
-                MenuButtonView() // affiche le bouton permettant d'accéder au menu
+            VStack {
+                MainImageView() // affiche l'image principale de présentation du restaurant
+                RestaurantIdentityView() // affiche le type + le nom du restaurant + le logo
+                    .padding(.top, viewPadding) // rajoute un espace au dessus de la vue
+                RestaurantInformationsView() // affiche les informations relatives au restaurant
+                    .padding(.top, viewPadding) // rajoute un espace au dessus de la vue
+                NavigationLink {
+                    DishList() // liste des repas chargés lorsque MenuButtonView() est appuyé
+                        .toolbar {
+                            ToolbarItem(placement: .principal) {
+                                Text("Menu")
+                                    .font(.custom(AppFont.plusJakartaSans_700.getFontName(),
+                                                  size: 20)) // typo personnalisée pour la navBar
+                                    .foregroundStyle(AppColor.customHighContrast.asColor())// couleur personnalisée pour le titre de la navBar
+                            }
+                        }
+                } label : {
+                    MenuButtonView() // affiche le bouton permettant d'accéder à la view du menu
+                        .padding(.top, viewPadding) // rajoute un espace au dessus du button
+                }
+                .navigationTitle("") // remplace le mot "Back" du chevron de retour de la page suivante
             }
+            .padding(20) // rajoute un espace tournant à l'ensemble des éléments de la page
         }
-        .padding() // espace tournant pour l'ensemble des éléments
     }
 }
 
-struct RestaurantImage: View {
+struct MainImageView: View {
     var body: some View {
         Image("TajMahal")
             .resizable()
-            .aspectRatio(contentMode: .fit)
+            .aspectRatio(contentMode: .fill)
+            .frame(minHeight: .zero)
+            .cornerRadius(10)
     }
 }
 
-struct RestaurantIdentity: View {
+struct RestaurantIdentityView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("Restaurant Indien")
-                    .font(.subheadline)
-                    .foregroundStyle(Color.gray)
-                Text("Taj Mahal")
-                    .font(.title)
-                    .foregroundStyle(Color(UIColor.darkGray))
+                Text(officeInformation.type)
+                    .foregroundStyle(AppColor.customMiddleContrast.asColor())
+                    .font(.custom(AppFont.plusJakartaSans_400.getFontName(),
+                                  size: 15))
+                Text(officeInformation.name)
+                    .foregroundStyle(AppColor.customHighContrast.asColor())
+                    .font(.custom(AppFont.plusJakartaSans_700.getFontName(),
+                                  size: 22))
             }
             Spacer()
             Image("Logo")
                 .resizable()
-                .frame(width: 50, height: 50)
-                .colorInvert().opacity(0.5)
+                .frame(width: 40)
+                .foregroundStyle(AppColor.customLightContrast.asColor())
         }
+        .frame(height: 40)
     }
 }
 
-struct InformationLine: View {
+struct InformationLineView: View {
     
     var imageName: String
-    var firstInformation: String
-    var secondInformation: String
+    var leftInformation: String
+    var rightInformation: String
     
     var body: some View {
         HStack {
-            Image(systemName: imageName)
+            Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 20, height: 20)
-                .padding(.trailing, 5)
-            Text(firstInformation)
+                .padding(.trailing, 10)
+                .foregroundStyle(AppColor.customMiddleContrast.asColor())
+                .frame(width: 25,
+                       height: 15)
+            Text(leftInformation)
             Spacer()
-            Text(secondInformation)
+            Text(rightInformation)
         }
-        .opacity(0.5)
-        .font(.system(size: 16))
+        .foregroundStyle(AppColor.customMiddleContrast.asColor())
+        .font(.custom(AppFont.plusJakartaSans_600.getFontName(),
+                      size: 14))
     }
 }
 
 struct RestaurantInformationsView: View {
+    
     var body: some View {
+    
+        let dateModel = DateModel()
+        
+        let officeOpeningHoursInfos = officeInformation.openingHours.first(where: {
+            $0.day == dateModel.getTodayWeekDayName()
+        })
+        
         VStack {
-            InformationLine(imageName: "clock",
-                            firstInformation: "Mardi",
-                            secondInformation: "11h30 - 14h30 • 18h30 - 22h00")
-            InformationLine(imageName: "takeoutbag.and.cup.and.straw",
-                            firstInformation: "Type de service",
-                            secondInformation: "À emporter")
-            InformationLine(imageName: "map",
-                            firstInformation: "12 Avenue de la Brique - 75010 PARIS",
-                            secondInformation: "")
-            InformationLine(imageName: "network",
-                            firstInformation: "www.tajmahal.fr",
-                            secondInformation: "")
-            InformationLine(imageName: "iphone.gen1",
-                            firstInformation: "06 12 34 56 78",
-                            secondInformation: "")
+            // informations des horaires d'ouverture
+            InformationLineView(imageName: "clock",
+                                leftInformation: officeOpeningHoursInfos?.day.inFrench().capitalized ?? "",
+                                rightInformation: officeOpeningHoursInfos?.hours ?? "")
+            Spacer()
+            // informations sur le type de service du restaurant
+            InformationLineView(imageName: "bag",
+                                leftInformation: "Type de service",
+                                rightInformation: officeInformation.serviceType)
+            Spacer()
+            // adresse du restaurant
+            InformationLineView(imageName: "pinPoint",
+                                leftInformation: "\(officeInformation.address.firstLine) - \(officeInformation.address.postalCode) \(officeInformation.address.city)",
+                                rightInformation: "")
+            Spacer()
+            // site internet du restaurant
+            InformationLineView(imageName: "map",
+                                leftInformation: officeInformation.webSiteURL,
+                                rightInformation: "")
+            Spacer()
+            // téléphone du restaurant
+            InformationLineView(imageName: "phone",
+                                leftInformation: officeInformation.phoneNumber,
+                                rightInformation: "")
         }
+        .frame(height: 130) // taille en hauteur de la zone des informations du restaurant
     }
 }
 
 struct MenuButtonView: View {
     var body: some View {
         Text("Accéder au menu")
-            .foregroundColor(.white)
-            .bold()
+            .foregroundStyle(.white)
             .frame(maxWidth: .infinity)
-            .padding()
-            .background(Color("CustomRed"))
+            .frame(height: 50)
+            .font(.custom(AppFont.plusJakartaSans_700.getFontName(),
+                          size: 18))
+            .background(AppColor.customRed.asColor())
             .cornerRadius(10)
     }
 }

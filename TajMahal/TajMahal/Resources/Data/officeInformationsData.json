@@ -1,0 +1,42 @@
+{
+    "name": "Taj Mahal",
+    "type": "Restaurant Indien",
+    "serviceType": "À emporter",
+    "address": {
+        "firstLine": "12 Avenue de la Brique",
+        "postalCode": 75010,
+        "city": "PARIS"
+    },
+    "phoneNumber": "06 12 34 56 78",
+    "openingHours": [
+        {
+            "day": "monday",
+            "hours": "18h30 - 22h00"
+        },
+        {
+            "day": "tuesday",
+            "hours": "11h30 - 14h30 • 18h30 - 22h00"
+        },
+        {
+            "day": "wednesday",
+            "hours": "11h30 - 14h30 • 18h30 - 22h00"
+        },
+        {
+            "day": "thursday",
+            "hours": "11h30 - 14h30 • 18h30 - 22h00"
+        },
+        {
+            "day": "friday",
+            "hours": "11h30 - 14h30 • 18h30 - 22h00"
+        },
+        {
+            "day": "saturday",
+            "hours": "11h30 - 14h30 • 18h30 - 22h00"
+        },
+        {
+            "day": "sunday",
+            "hours": "11h30 - 15h00"
+        }
+    ],
+    "webSiteURL": "www.tajmahal.fr"
+}

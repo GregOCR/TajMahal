@@ -7,29 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37E925122B53B747007E7780 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E925112B53B747007E7780 /* DataModel.swift */; };
-		37E925172B53B87E007E7780 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E925162B53B87E007E7780 /* LaunchScreenView.swift */; };
-		428D2B512AFA851900BBA4F5 /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2B502AFA851900BBA4F5 /* DishModel.swift */; };
-		428D2B532AFA882700BBA4F5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2B522AFA882700BBA4F5 /* ViewModel.swift */; };
+		3705AFC72B588814003AEC85 /* PlusJakartaSans-Bold_700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3705AFC42B588814003AEC85 /* PlusJakartaSans-Bold_700.ttf */; };
+		3705AFC82B588814003AEC85 /* PlusJakartaSans-SemiBold_600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3705AFC52B588814003AEC85 /* PlusJakartaSans-SemiBold_600.ttf */; };
+		3705AFC92B588814003AEC85 /* PlusJakartaSans-Regular_400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3705AFC62B588814003AEC85 /* PlusJakartaSans-Regular_400.ttf */; };
+		3705AFCB2B588B5A003AEC85 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3705AFCA2B588B5A003AEC85 /* AppFont.swift */; };
+		3709CCEF2B61352E00C7C554 /* OfficeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3709CCEE2B61352E00C7C554 /* OfficeInformation.swift */; };
+		3709CCF12B613D2300C7C554 /* officeInformationsData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3709CCF02B613D2300C7C554 /* officeInformationsData.json */; };
+		3709CCF32B615E7000C7C554 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3709CCF22B615E7000C7C554 /* Launch Screen.storyboard */; };
+		370CC7FB2B55C4E500D58022 /* DishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370CC7FA2B55C4E500D58022 /* DishList.swift */; };
+		374155902B550C8700C28566 /* ChiliPicto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741558F2B550C8700C28566 /* ChiliPicto.swift */; };
+		374155922B550D3200C28566 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374155912B550D3200C28566 /* AppColor.swift */; };
+		374155942B5531C100C28566 /* DishRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374155932B5531C100C28566 /* DishRow.swift */; };
+		3769FA932B56736900600549 /* SpiceLevelCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3769FA922B56736900600549 /* SpiceLevelCapsule.swift */; };
+		3769FA952B5675D800600549 /* VisualSpiceLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3769FA942B5675D800600549 /* VisualSpiceLevel.swift */; };
+		379590272B568479001BC0B5 /* DishDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379590262B568479001BC0B5 /* DishDetailsView.swift */; };
+		37E925122B53B747007E7780 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E925112B53B747007E7780 /* ModelData.swift */; };
+		37EB59CF2B696A29003AFB36 /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EB59CE2B696A29003AFB36 /* DateModel.swift */; };
+		37EC132A2B57B65900149BF5 /* mainCoursesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 37EC13282B57B65900149BF5 /* mainCoursesData.json */; };
+		37EC132B2B57B65900149BF5 /* appetizersData.json in Resources */ = {isa = PBXBuildFile; fileRef = 37EC13292B57B65900149BF5 /* appetizersData.json */; };
+		428D2B512AFA851900BBA4F5 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2B502AFA851900BBA4F5 /* Dish.swift */; };
+		428D2B532AFA882700BBA4F5 /* SpiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D2B522AFA882700BBA4F5 /* SpiceViewModel.swift */; };
 		42E9DCAE2AF11136007CE7D0 /* TajMahalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9DCAD2AF11136007CE7D0 /* TajMahalApp.swift */; };
 		42E9DCB22AF11138007CE7D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E9DCB12AF11138007CE7D0 /* Assets.xcassets */; };
 		42E9DCB52AF11138007CE7D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42E9DCB42AF11138007CE7D0 /* Preview Assets.xcassets */; };
 		42E9DCBF2AF11439007CE7D0 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */; };
-		42E9DCC22AF117AE007CE7D0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E9DCC12AF117AE007CE7D0 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		37E925112B53B747007E7780 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		37E925162B53B87E007E7780 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
-		428D2B502AFA851900BBA4F5 /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishModel.swift; sourceTree = "<group>"; };
-		428D2B522AFA882700BBA4F5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		3705AFC42B588814003AEC85 /* PlusJakartaSans-Bold_700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold_700.ttf"; sourceTree = "<group>"; };
+		3705AFC52B588814003AEC85 /* PlusJakartaSans-SemiBold_600.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-SemiBold_600.ttf"; sourceTree = "<group>"; };
+		3705AFC62B588814003AEC85 /* PlusJakartaSans-Regular_400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Regular_400.ttf"; sourceTree = "<group>"; };
+		3705AFCA2B588B5A003AEC85 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		3709CCEE2B61352E00C7C554 /* OfficeInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeInformation.swift; sourceTree = "<group>"; };
+		3709CCF02B613D2300C7C554 /* officeInformationsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = officeInformationsData.json; sourceTree = "<group>"; };
+		3709CCF22B615E7000C7C554 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		370CC7FA2B55C4E500D58022 /* DishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishList.swift; sourceTree = "<group>"; };
+		3741558F2B550C8700C28566 /* ChiliPicto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiliPicto.swift; sourceTree = "<group>"; };
+		374155912B550D3200C28566 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		374155932B5531C100C28566 /* DishRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishRow.swift; sourceTree = "<group>"; };
+		3769FA922B56736900600549 /* SpiceLevelCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiceLevelCapsule.swift; sourceTree = "<group>"; };
+		3769FA942B5675D800600549 /* VisualSpiceLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualSpiceLevel.swift; sourceTree = "<group>"; };
+		379590262B568479001BC0B5 /* DishDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailsView.swift; sourceTree = "<group>"; };
+		37E925112B53B747007E7780 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		37EB59CE2B696A29003AFB36 /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
+		37EC13282B57B65900149BF5 /* mainCoursesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mainCoursesData.json; sourceTree = "<group>"; };
+		37EC13292B57B65900149BF5 /* appetizersData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appetizersData.json; sourceTree = "<group>"; };
+		428D2B502AFA851900BBA4F5 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		428D2B522AFA882700BBA4F5 /* SpiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiceViewModel.swift; sourceTree = "<group>"; };
 		42E9DCAA2AF11136007CE7D0 /* TajMahal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TajMahal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E9DCAD2AF11136007CE7D0 /* TajMahalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TajMahalApp.swift; sourceTree = "<group>"; };
 		42E9DCB12AF11138007CE7D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42E9DCB42AF11138007CE7D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		42E9DCC02AF11662007CE7D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		42E9DCC12AF117AE007CE7D0 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,11 +73,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3705AFC32B584AFD003AEC85 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3705AFC62B588814003AEC85 /* PlusJakartaSans-Regular_400.ttf */,
+				3705AFC52B588814003AEC85 /* PlusJakartaSans-SemiBold_600.ttf */,
+				3705AFC42B588814003AEC85 /* PlusJakartaSans-Bold_700.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		378BDCE72B5645EE00F98B8A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3709CCF02B613D2300C7C554 /* officeInformationsData.json */,
+				37EC13292B57B65900149BF5 /* appetizersData.json */,
+				37EC13282B57B65900149BF5 /* mainCoursesData.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		378BDCE82B56479B00F98B8A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3741558F2B550C8700C28566 /* ChiliPicto.swift */,
+				3769FA922B56736900600549 /* SpiceLevelCapsule.swift */,
+				3769FA942B5675D800600549 /* VisualSpiceLevel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		378BDCE92B5647A800F98B8A /* Dish */ = {
+			isa = PBXGroup;
+			children = (
+				374155932B5531C100C28566 /* DishRow.swift */,
+				370CC7FA2B55C4E500D58022 /* DishList.swift */,
+			);
+			path = Dish;
+			sourceTree = "<group>";
+		};
 		37E925132B53B766007E7780 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				428D2B502AFA851900BBA4F5 /* DishModel.swift */,
-				37E925112B53B747007E7780 /* DataModel.swift */,
+				374155912B550D3200C28566 /* AppColor.swift */,
+				3705AFCA2B588B5A003AEC85 /* AppFont.swift */,
+				428D2B502AFA851900BBA4F5 /* Dish.swift */,
+				3709CCEE2B61352E00C7C554 /* OfficeInformation.swift */,
+				37E925112B53B747007E7780 /* ModelData.swift */,
+				37EB59CE2B696A29003AFB36 /* DateModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -55,7 +128,7 @@
 		37E925142B53B785007E7780 /* ViemModels */ = {
 			isa = PBXGroup;
 			children = (
-				428D2B522AFA882700BBA4F5 /* ViewModel.swift */,
+				428D2B522AFA882700BBA4F5 /* SpiceViewModel.swift */,
 			);
 			path = ViemModels;
 			sourceTree = "<group>";
@@ -63,6 +136,8 @@
 		37E925152B53B796007E7780 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3705AFC32B584AFD003AEC85 /* Fonts */,
+				378BDCE72B5645EE00F98B8A /* Data */,
 				42E9DCB12AF11138007CE7D0 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -109,9 +184,11 @@
 		42E9DCBB2AF113D1007CE7D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				37E925162B53B87E007E7780 /* LaunchScreenView.swift */,
+				3709CCF22B615E7000C7C554 /* Launch Screen.storyboard */,
 				42E9DCBE2AF11439007CE7D0 /* WelcomeView.swift */,
-				42E9DCC12AF117AE007CE7D0 /* MenuView.swift */,
+				379590262B568479001BC0B5 /* DishDetailsView.swift */,
+				378BDCE82B56479B00F98B8A /* Components */,
+				378BDCE92B5647A800F98B8A /* Dish */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,7 +251,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37EC132B2B57B65900149BF5 /* appetizersData.json in Resources */,
 				42E9DCB52AF11138007CE7D0 /* Preview Assets.xcassets in Resources */,
+				3709CCF12B613D2300C7C554 /* officeInformationsData.json in Resources */,
+				3709CCF32B615E7000C7C554 /* Launch Screen.storyboard in Resources */,
+				3705AFC92B588814003AEC85 /* PlusJakartaSans-Regular_400.ttf in Resources */,
+				3705AFC82B588814003AEC85 /* PlusJakartaSans-SemiBold_600.ttf in Resources */,
+				37EC132A2B57B65900149BF5 /* mainCoursesData.json in Resources */,
+				3705AFC72B588814003AEC85 /* PlusJakartaSans-Bold_700.ttf in Resources */,
 				42E9DCB22AF11138007CE7D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,13 +270,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				428D2B532AFA882700BBA4F5 /* ViewModel.swift in Sources */,
+				428D2B532AFA882700BBA4F5 /* SpiceViewModel.swift in Sources */,
 				42E9DCBF2AF11439007CE7D0 /* WelcomeView.swift in Sources */,
-				37E925172B53B87E007E7780 /* LaunchScreenView.swift in Sources */,
-				42E9DCC22AF117AE007CE7D0 /* MenuView.swift in Sources */,
-				37E925122B53B747007E7780 /* DataModel.swift in Sources */,
+				3705AFCB2B588B5A003AEC85 /* AppFont.swift in Sources */,
+				3769FA952B5675D800600549 /* VisualSpiceLevel.swift in Sources */,
+				374155902B550C8700C28566 /* ChiliPicto.swift in Sources */,
+				37EB59CF2B696A29003AFB36 /* DateModel.swift in Sources */,
+				37E925122B53B747007E7780 /* ModelData.swift in Sources */,
+				370CC7FB2B55C4E500D58022 /* DishList.swift in Sources */,
+				3769FA932B56736900600549 /* SpiceLevelCapsule.swift in Sources */,
 				42E9DCAE2AF11136007CE7D0 /* TajMahalApp.swift in Sources */,
-				428D2B512AFA851900BBA4F5 /* DishModel.swift in Sources */,
+				428D2B512AFA851900BBA4F5 /* Dish.swift in Sources */,
+				374155922B550D3200C28566 /* AppColor.swift in Sources */,
+				374155942B5531C100C28566 /* DishRow.swift in Sources */,
+				379590272B568479001BC0B5 /* DishDetailsView.swift in Sources */,
+				3709CCEF2B61352E00C7C554 /* OfficeInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,8 +424,8 @@
 				INFOPLIST_FILE = TajMahal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -342,7 +434,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.amandinecousin.TajMahal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregv.TajMahal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -367,8 +459,8 @@
 				INFOPLIST_FILE = TajMahal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -377,7 +469,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.amandinecousin.TajMahal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gregv.TajMahal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

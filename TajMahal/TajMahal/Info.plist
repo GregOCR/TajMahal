@@ -2,14 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UILaunchScreen</key>
-	<dict>
-		<key>UIColorName</key>
-		<string>CustomRed</string>
-		<key>UIImageName</key>
-		<string>Logo</string>
-		<key>UILaunchScreen</key>
-		<dict/>
-	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>PlusJakartaSans-Regular_400.ttf</string>
+		<string>PlusJakartaSans-SemiBold_600.ttf</string>
+		<string>PlusJakartaSans-Bold_700.ttf</string>
+	</array>
 </dict>
 </plist>

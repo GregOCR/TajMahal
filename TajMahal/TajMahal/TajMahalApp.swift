@@ -3,6 +3,7 @@
 //  TajMahal
 //
 //  Created by Amandine Cousin on 31/10/2023.
+//  Modified by Greg on 14/01/2024.
 //
 
 import SwiftUI
@@ -11,8 +12,8 @@ import SwiftUI
 struct TajMahalApp: App {
     var body: some Scene {
         WindowGroup {
-            WelcomeView()
-                .environment(\.colorScheme, .light) // Force le mode clair
+            WelcomeView() // première vue chargée
         }
     }
 }
+
