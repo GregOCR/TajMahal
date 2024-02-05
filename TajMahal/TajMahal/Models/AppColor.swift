@@ -22,7 +22,7 @@ enum AppColor {
         case .customRed:
             return Color("CustomRed")
         case .customUltraLightContrast:
-            return Color("customUltraLightContrast")
+            return Color("customUltraLightContrast") // ici le ultra light contrast
         case .customLightContrast:
             return Color("customLightContrast")
         case .customMiddleContrast:
