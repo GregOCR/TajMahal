@@ -9,7 +9,7 @@ import SwiftUI
 
 // structure représentant la view d'une row avec un résumé du plat
 struct DishRow: View {
-    
+
     var dish: Dish // prend en paramètre les données du plat à afficher
     
     var body: some View {
@@ -57,8 +57,4 @@ extension Double {
         }
         return "Nous consulter." // return spécifique lorsque le Double vaut zéro
     }
-}
-
-#Preview {
-    DishRow(dish: mainCourses.0.first!)
 }

@@ -1,5 +1,5 @@
 //
-//  DateModel.swift
+//  DateViewModel.swift
 //  TajMahal
 //
 //  Created by Greg on 30/01/2024.

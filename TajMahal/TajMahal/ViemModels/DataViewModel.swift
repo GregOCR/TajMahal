@@ -1,5 +1,5 @@
 //
-//  ModelData.swift
+//  DataViewModel.swift
 //  TajMahal
 //
 //  Created by Greg on 14/01/2024.
@@ -8,23 +8,19 @@
 import SwiftUI
 
 final class DataViewModel: ObservableObject {
-    
     // MARK: - PROPERTIES
-        
+            
     // on utilise @Published pour "observer" les changements apportées aux données chargées
-    @Published var officeInformations: [OfficeInformation] = []
-    @Published var appetizers: (data:[Dish], title:String) = (data: [], title: "")
-    @Published var mainCourses: (data:[Dish], title:String) = (data: [], title: "")
+    @Published var officeInformations: OfficeInformation = OfficeInformation(name: "", type: "", serviceType: "", address: Address(firstLine: "", postalCode: 0, city: ""), phoneNumber: "", openingHours: [OpeningHour(day: .monday, hours: "")], webSiteURL: "")
     
-    // MARK: - INITIALIZATION
-    
-    init() { // chargement des données
-        self.officeInformations = load("officeInformationsData")
-        self.appetizers = (data: load("appetizersData"), title: "Entrées")
-        self.mainCourses = (data: load("mainCoursesData"), title: "Plats Principaux")
-    }
+    @Published var dishes: [(data:[Dish], title:String)] = [(data:[], title:"")]
 
     // MARK: - METHODS
+    
+    func loadJsonFiles() {
+        self.officeInformations = load("officeInformationsData")
+        self.dishes = [(data: load("appetizersData"), title: "Entrées"), (data: load("mainCoursesData"), title: "Plats Principaux")]
+    }
 
     // permet de charger et de décoder les données JSON pour en retourner un Objet
     private func load<T: Decodable>(_ filename: String) -> T {
@@ -48,5 +44,5 @@ final class DataViewModel: ObservableObject {
         } catch {
             fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
         }
-    } //: FUNC load
+    } //: func load
 }

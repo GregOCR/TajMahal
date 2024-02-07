@@ -8,11 +8,11 @@
 
 import SwiftUI
 
-private let officeInformation = officeInformations
-
 // Page d'accueil
 struct WelcomeView: View {
     
+    @StateObject var dataVM = DataViewModel() // source de données
+
     var body: some View {
         
         let viewPadding: CGFloat = 25 // espace par défaut de la page
@@ -20,9 +20,9 @@ struct WelcomeView: View {
         NavigationStack {
             VStack {
                 MainImageView() // affiche l'image principale de présentation du restaurant
-                RestaurantIdentityView() // affiche le type + le nom du restaurant + le logo
+                RestaurantIdentityView(dataVM: dataVM) // affiche le type + le nom du restaurant + le logo
                     .padding(.top, viewPadding) // rajoute un espace au dessus de la vue
-                RestaurantInformationsView() // affiche les informations relatives au restaurant
+                RestaurantInformationsView(dataVM: dataVM) // affiche les informations relatives au restaurant
                     .padding(.top, viewPadding) // rajoute un espace au dessus de la vue
                 NavigationLink {
                     DishList() // liste des repas chargés lorsque MenuButtonView() est appuyé
@@ -42,6 +42,9 @@ struct WelcomeView: View {
             }
             .padding(20) // rajoute un espace tournant à l'ensemble des éléments de la page
         }
+        .onAppear(perform: {
+            dataVM.loadJsonFiles()
+        })
     }
 }
 
@@ -56,14 +59,17 @@ struct MainImageView: View {
 }
 
 struct RestaurantIdentityView: View {
+    
+    @ObservedObject var dataVM: DataViewModel
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(officeInformation.type)
+                Text(dataVM.officeInformations.type)
                     .foregroundStyle(AppColor.customMiddleContrast.asColor())
                     .font(.custom(AppFont.plusJakartaSans_400.getFontName(),
                                   size: 15))
-                Text(officeInformation.name)
+                Text(dataVM.officeInformations.name)
                     .foregroundStyle(AppColor.customHighContrast.asColor())
                     .font(.custom(AppFont.plusJakartaSans_700.getFontName(),
                                   size: 22))
@@ -105,11 +111,14 @@ struct InformationLineView: View {
 
 struct RestaurantInformationsView: View {
     
+    @ObservedObject var dataVM: DataViewModel
+
     var body: some View {
-    
-        let dateModel = DateModel()
         
-        let officeOpeningHoursInfos = officeInformation.openingHours.first(where: {
+        let dateModel = DateViewModel()
+                        
+        let officeInformations = dataVM.officeInformations
+        let officeOpeningHoursInfos = officeInformations.openingHours.first(where: {
             $0.day == dateModel.getTodayWeekDayName()
         })
         
@@ -122,21 +131,21 @@ struct RestaurantInformationsView: View {
             // informations sur le type de service du restaurant
             InformationLineView(imageName: "bag",
                                 leftInformation: "Type de service",
-                                rightInformation: officeInformation.serviceType)
+                                rightInformation: officeInformations.serviceType)
             Spacer()
             // adresse du restaurant
             InformationLineView(imageName: "pinPoint",
-                                leftInformation: "\(officeInformation.address.firstLine) - \(officeInformation.address.postalCode) \(officeInformation.address.city)",
+                                leftInformation: "\(officeInformations.address.firstLine) - \(officeInformations.address.postalCode) \(officeInformations.address.city)",
                                 rightInformation: "")
             Spacer()
             // site internet du restaurant
             InformationLineView(imageName: "map",
-                                leftInformation: officeInformation.webSiteURL,
+                                leftInformation: officeInformations.webSiteURL,
                                 rightInformation: "")
             Spacer()
             // téléphone du restaurant
             InformationLineView(imageName: "phone",
-                                leftInformation: officeInformation.phoneNumber,
+                                leftInformation: officeInformations.phoneNumber,
                                 rightInformation: "")
         }
         .frame(height: 130) // taille en hauteur de la zone des informations du restaurant

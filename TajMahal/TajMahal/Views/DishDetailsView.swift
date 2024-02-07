@@ -13,7 +13,6 @@ struct DishDetailsView: View {
     var dish: Dish // prend en paramètre le repas à afficher
     
     var body: some View {
-        
         ScrollView {
             VStack(alignment: .leading) {
                 DishImageView(imageName: dish.imageName,
@@ -74,8 +73,4 @@ struct TextBlocView: View {
             .font(.custom(AppFont.plusJakartaSans_400.getFontName(),
                           size: viewFontSize))
     }
-}
-
-#Preview {
-    DishDetailsView(dish: appetizers.0.first!)
 }

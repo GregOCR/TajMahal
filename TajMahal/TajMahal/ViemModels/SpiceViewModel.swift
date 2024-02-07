@@ -1,12 +1,10 @@
 //
-//  ViewModel.swift
+//  SpiceViewModel.swift
 //  TajMahal
 //
 //  Created by Amandine Cousin on 07/11/2023.
 //  Modified by Greg on 14/01/2024.
 //
-
-import Foundation
 
 // Structure qui gère toute la logique du code
 // Fait l'intermédiaire entre l'affichage et les données
