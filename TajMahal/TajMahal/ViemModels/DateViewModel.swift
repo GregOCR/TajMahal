@@ -38,7 +38,7 @@ enum WeekDayName: String, Hashable, Codable {
     }
 }
 
-struct DateModel {
+struct DateViewModel {
     
     // méthode qui renvoie le cas d'enum correspondant au jour actuel à Paris
     func getTodayWeekDayName() -> WeekDayName {
